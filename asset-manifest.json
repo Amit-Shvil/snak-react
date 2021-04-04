@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.f92b98c4.chunk.css",
-    "main.js": "/static/js/main.e42020a2.chunk.js",
-    "main.js.map": "/static/js/main.e42020a2.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.2d108584.js",
-    "runtime-main.js.map": "/static/js/runtime-main.2d108584.js.map",
-    "static/css/2.4c97ca4f.chunk.css": "/static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.b6a04d0d.chunk.js": "/static/js/2.b6a04d0d.chunk.js",
-    "static/js/2.b6a04d0d.chunk.js.map": "/static/js/2.b6a04d0d.chunk.js.map",
-    "static/js/3.ab396de5.chunk.js": "/static/js/3.ab396de5.chunk.js",
-    "static/js/3.ab396de5.chunk.js.map": "/static/js/3.ab396de5.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.4c97ca4f.chunk.css.map": "/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.f92b98c4.chunk.css.map": "/static/css/main.f92b98c4.chunk.css.map",
-    "static/js/2.b6a04d0d.chunk.js.LICENSE.txt": "/static/js/2.b6a04d0d.chunk.js.LICENSE.txt",
-    "static/media/Cube.css": "/static/media/ground.ff9742c6.jpg"
+    "main.css": "/snak-react/static/css/main.50e49c79.chunk.css",
+    "main.js": "/snak-react/static/js/main.e42020a2.chunk.js",
+    "main.js.map": "/snak-react/static/js/main.e42020a2.chunk.js.map",
+    "runtime-main.js": "/snak-react/static/js/runtime-main.90c50a2b.js",
+    "runtime-main.js.map": "/snak-react/static/js/runtime-main.90c50a2b.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/snak-react/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.b6a04d0d.chunk.js": "/snak-react/static/js/2.b6a04d0d.chunk.js",
+    "static/js/2.b6a04d0d.chunk.js.map": "/snak-react/static/js/2.b6a04d0d.chunk.js.map",
+    "static/js/3.ab396de5.chunk.js": "/snak-react/static/js/3.ab396de5.chunk.js",
+    "static/js/3.ab396de5.chunk.js.map": "/snak-react/static/js/3.ab396de5.chunk.js.map",
+    "index.html": "/snak-react/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/snak-react/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.50e49c79.chunk.css.map": "/snak-react/static/css/main.50e49c79.chunk.css.map",
+    "static/js/2.b6a04d0d.chunk.js.LICENSE.txt": "/snak-react/static/js/2.b6a04d0d.chunk.js.LICENSE.txt",
+    "static/media/Cube.css": "/snak-react/static/media/ground.ff9742c6.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2d108584.js",
+    "static/js/runtime-main.90c50a2b.js",
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.b6a04d0d.chunk.js",
-    "static/css/main.f92b98c4.chunk.css",
+    "static/css/main.50e49c79.chunk.css",
     "static/js/main.e42020a2.chunk.js"
   ]
 }
