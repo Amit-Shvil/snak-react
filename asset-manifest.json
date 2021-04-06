@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/snak-react/static/css/main.50e49c79.chunk.css",
-    "main.js": "/snak-react/static/js/main.5db159bf.chunk.js",
-    "main.js.map": "/snak-react/static/js/main.5db159bf.chunk.js.map",
+    "main.css": "/snak-react/static/css/main.47f581d8.chunk.css",
+    "main.js": "/snak-react/static/js/main.907b65f5.chunk.js",
+    "main.js.map": "/snak-react/static/js/main.907b65f5.chunk.js.map",
     "runtime-main.js": "/snak-react/static/js/runtime-main.90c50a2b.js",
     "runtime-main.js.map": "/snak-react/static/js/runtime-main.90c50a2b.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/snak-react/static/css/2.4c97ca4f.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.ab396de5.chunk.js.map": "/snak-react/static/js/3.ab396de5.chunk.js.map",
     "index.html": "/snak-react/index.html",
     "static/css/2.4c97ca4f.chunk.css.map": "/snak-react/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.50e49c79.chunk.css.map": "/snak-react/static/css/main.50e49c79.chunk.css.map",
+    "static/css/main.47f581d8.chunk.css.map": "/snak-react/static/css/main.47f581d8.chunk.css.map",
     "static/js/2.0671c777.chunk.js.LICENSE.txt": "/snak-react/static/js/2.0671c777.chunk.js.LICENSE.txt",
     "static/media/Cube.css": "/snak-react/static/media/ground.ff9742c6.jpg",
     "static/media/closeup.8e44aa94.jpg": "/snak-react/static/media/closeup.8e44aa94.jpg"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.90c50a2b.js",
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.0671c777.chunk.js",
-    "static/css/main.50e49c79.chunk.css",
-    "static/js/main.5db159bf.chunk.js"
+    "static/css/main.47f581d8.chunk.css",
+    "static/js/main.907b65f5.chunk.js"
   ]
 }
