@@ -1,15 +1,15 @@
 import React, { useState } from "react"
 import { Button, Form, Modal } from "react-bootstrap"
-import { Util } from "../../util";
+import useSound from "use-sound";
 import './QuestionModal.css';
-const QUESTIONS = [
+export const QUESTIONS = [
     {
         questionText:'לך אל הנמלה עצל ...',
         options: [
             'ראה את דרכיה ושב בצל',
              'ותחזור מלא מרץ' ,
              'ראה את דרכיה וכחם'],
-        answerIndex: 0
+        answerIndex: 2
     },
     {
         questionText:'כמה רגלים יש לנמלה',
@@ -34,15 +34,33 @@ const QUESTIONS = [
         options: [
             'כן ',
              'לא'
-             
         ],
-        answerIndex: 1
+        answerIndex: 0
+    },
+    {
+      questionText:'באיזה יבשת איין נמלים',
+      options: [
+          'נמלים יש בכל היבשות ',
+           'אין ביבשת אוסטרליה',
+           'איין נמלים ביבשת אנטרטיקה'
+      ],
+      answerIndex: 2
+    }, 
+    {
+      questionText:'מה אוכלות רוב הנמלים',
+      options: [
+        'רק גלידה וניל',
+         'רוב הנמלים הן אוכלות כל',
+         'רק מצות שמורות של פסח',
+         'אבנים'
+      ],
+      answerIndex: 1
     }
 ];
 
-export const QuestionsModal = ({onClose}: any) => {
-    const [question]  = useState(Util.suffulArray(QUESTIONS)[0]);
-    const [selectedIndex, setSelectedIndex] = useState<number>(-1);
+export const QuestionsModal = ({onClose, question}: any) => {
+    const [play] = useSound('./bell.mp3');
+    const [answer, setSelectedAnswer] = useState<number>(-1);
     return  <Modal show={true} dir="rtl" className='question-modal' onHide={() => onClose(0)} >
         <Form dir="rtl">
     <Modal.Header closeButton>
@@ -55,7 +73,7 @@ export const QuestionsModal = ({onClose}: any) => {
                 dir="rtl"
                 name="answerOptions"
                 key={index}
-                onChange={() => setSelectedIndex(index)}
+                onChange={() => setSelectedAnswer(index)}
                 id={`default-radio`}
                 label={option}/>
     })}
@@ -63,8 +81,10 @@ export const QuestionsModal = ({onClose}: any) => {
     <Modal.Footer>
       <Button variant="primary" onClick={()=> {
           let scoreToAdd = 0;
-          if (selectedIndex === question.answerIndex) {
+          if (answer === question.answerIndex) {
+            play();
             scoreToAdd = 50
+
           }
           onClose(scoreToAdd);
       }}>

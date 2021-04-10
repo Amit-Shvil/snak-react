@@ -93,8 +93,6 @@ body {
 }
 .btn {
     width: 200px;
-    color: red;
-    background-color: blue;
 }
 .center {
     display: flex;

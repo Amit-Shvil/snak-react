@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { SoundManager } from "../../soundManager";
 import { Util } from "../../util";
 import { GameView } from "./GameView";
-import {QuestionsModal} from "./../question/QuestionsModal";
+import {QUESTIONS, QuestionsModal} from "./../question/QuestionsModal";
+
 export class Dir {
     static LEFT: string = 'left';
     static RIGHT: string= 'right';
@@ -25,28 +25,27 @@ const numOfFood: number = 8;
 const bordSize: number = 17;
 
 export const Game = ({onGameEnd}: any) =>  {
-    const soundMgr: SoundManager = new SoundManager();
+    
     let [gameInterval, setGameInterval] = useState<any>();
     let [score, setScore] = useState<number>(0);
     let [snake, setSnake] = useState<Array<SnakePart>>([]);
     let [dir, setDir] = useState<string>(Dir.RIGHT);
     let [foods, setFoods] = useState<Array<Food>>([]);
+
     let [showQuestion, setShowQuestion] = useState<boolean>(false);
+    const [questions,setQuestions]  = useState([]);
+    useEffect( () => {
+        setQuestions(Util.suffulArray(QUESTIONS));
+    }, []);
+    const [selectedIndex, setSelectedIndex] = useState<number>(-1);
+
     useEffect(() => {
-       init(); 
+       init();      
     },[]);
 
-    const restart = () => {
-        setScore(0);
-        setSnake([]);
-        setDir( Dir.RIGHT);
-        setFoods([]);
-        gameOver();
-        init();
-    }
-      
     const init = () => {
-        soundMgr.startBg();
+        //soundMgr.startBg();
+        //play();
         createSnake();
         initFood();
         startGame();
@@ -66,8 +65,6 @@ export const Game = ({onGameEnd}: any) =>  {
       }
     
       const onKey = (e: any) => {
-        console.log('set dit', e);
-        //e = e || window.event;
         if (e.keyCode === 38 && dir !== Dir.DOWON) {
           dir = Dir.UP;
         } else if (e.keyCode === 40 && dir !== Dir.UP) {
@@ -78,7 +75,6 @@ export const Game = ({onGameEnd}: any) =>  {
           dir = Dir.RIGHT;
         }
         setDir(dir);
-        console.log('set dit', dir);
       }
       
       const stopGameLoop = () => {
@@ -92,7 +88,10 @@ export const Game = ({onGameEnd}: any) =>  {
     
       const haltGame = () => {
         stopGameLoop();
-        //soundMgr.muteBg();
+        const newIndex = selectedIndex + 1;
+        console.log('newIndex', newIndex,'QUESTIONS.length',QUESTIONS.length, newIndex % QUESTIONS.length-1);
+        setSelectedIndex(newIndex % (QUESTIONS.length-1));
+        console.log('halt game');
         setShowQuestion(true);
       }
 
@@ -129,7 +128,7 @@ export const Game = ({onGameEnd}: any) =>  {
           value:'snakePart'
         };
         snake.push(pos);
-        for (let index = 0; index < 5; index++) {
+        for (let index = 0; index < 3; index++) {
           pos = getNextPos(pos, dir);
           snake.push(pos);
         }
@@ -172,16 +171,16 @@ export const Game = ({onGameEnd}: any) =>  {
       }
 
       const gameOver = () => {
-        soundMgr.stopBg();
+        //soundMgr.stopBg();
+        //stop();
         stopGameLoop();
         setTimeout(() => onGameEnd() , 1000);
       }
      
       const draw = ()  => {
-        //this.gameRender.render(this.foods, this.snake);
-        setDir(dir);
-        setFoods(foods);
-        setSnake(snake);
+        // setDir(dir);
+        // setFoods(foods);
+        // setSnake(snake);
       }
       
       const doMove = () => {
@@ -204,7 +203,6 @@ export const Game = ({onGameEnd}: any) =>  {
     
         if (eatedFood !== -1) {
           snake.unshift(removedPos as SnakePart);
-          console.log('eatedFood', eatedFood);
           score = score + 10;
           setScore(score);
           foods.splice(eatedFood, 1);
@@ -259,7 +257,7 @@ export const Game = ({onGameEnd}: any) =>  {
       }
 
       const isInBoard = (pos:any) => {
-        console.log('check if game over', pos);
+        //console.log('check if game over', pos);
         
         if (pos.row >= bordSize ||
           pos.row < 0 ||
@@ -270,12 +268,12 @@ export const Game = ({onGameEnd}: any) =>  {
           return true;
         }
       }
-    
+      
       return <div className="game-screen">
         <div className="game-board">
           <div className="score">נקודות: {score} </div>
           <GameView boardSize={bordSize} snake={snake} foods={foods}/>
-          {showQuestion? <QuestionsModal onClose={(addedScore: number) => {
+          {showQuestion? <QuestionsModal  question={questions[selectedIndex]} onClose={(addedScore: number) => {
             score = score + addedScore;
             setScore(score);
             setShowQuestion(false);
