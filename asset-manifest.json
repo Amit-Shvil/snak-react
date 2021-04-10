@@ -1,27 +1,30 @@
 {
   "files": {
     "main.css": "/snak-react/static/css/main.47f581d8.chunk.css",
-    "main.js": "/snak-react/static/js/main.6a9c3271.chunk.js",
-    "main.js.map": "/snak-react/static/js/main.6a9c3271.chunk.js.map",
-    "runtime-main.js": "/snak-react/static/js/runtime-main.90c50a2b.js",
-    "runtime-main.js.map": "/snak-react/static/js/runtime-main.90c50a2b.js.map",
+    "main.js": "/snak-react/static/js/main.ca924033.chunk.js",
+    "main.js.map": "/snak-react/static/js/main.ca924033.chunk.js.map",
+    "runtime-main.js": "/snak-react/static/js/runtime-main.01b725bd.js",
+    "runtime-main.js.map": "/snak-react/static/js/runtime-main.01b725bd.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/snak-react/static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.0671c777.chunk.js": "/snak-react/static/js/2.0671c777.chunk.js",
-    "static/js/2.0671c777.chunk.js.map": "/snak-react/static/js/2.0671c777.chunk.js.map",
-    "static/js/3.ab396de5.chunk.js": "/snak-react/static/js/3.ab396de5.chunk.js",
-    "static/js/3.ab396de5.chunk.js.map": "/snak-react/static/js/3.ab396de5.chunk.js.map",
+    "static/js/2.a888c161.chunk.js": "/snak-react/static/js/2.a888c161.chunk.js",
+    "static/js/2.a888c161.chunk.js.map": "/snak-react/static/js/2.a888c161.chunk.js.map",
+    "static/js/3.4fb30a16.chunk.js": "/snak-react/static/js/3.4fb30a16.chunk.js",
+    "static/js/3.4fb30a16.chunk.js.map": "/snak-react/static/js/3.4fb30a16.chunk.js.map",
+    "static/js/4.f60db0dc.chunk.js": "/snak-react/static/js/4.f60db0dc.chunk.js",
+    "static/js/4.f60db0dc.chunk.js.map": "/snak-react/static/js/4.f60db0dc.chunk.js.map",
     "index.html": "/snak-react/index.html",
     "static/css/2.4c97ca4f.chunk.css.map": "/snak-react/static/css/2.4c97ca4f.chunk.css.map",
     "static/css/main.47f581d8.chunk.css.map": "/snak-react/static/css/main.47f581d8.chunk.css.map",
-    "static/js/2.0671c777.chunk.js.LICENSE.txt": "/snak-react/static/js/2.0671c777.chunk.js.LICENSE.txt",
+    "static/js/2.a888c161.chunk.js.LICENSE.txt": "/snak-react/static/js/2.a888c161.chunk.js.LICENSE.txt",
+    "static/js/3.4fb30a16.chunk.js.LICENSE.txt": "/snak-react/static/js/3.4fb30a16.chunk.js.LICENSE.txt",
     "static/media/Cube.css": "/snak-react/static/media/ground.ff9742c6.jpg",
     "static/media/closeup.8e44aa94.jpg": "/snak-react/static/media/closeup.8e44aa94.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.90c50a2b.js",
+    "static/js/runtime-main.01b725bd.js",
     "static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.0671c777.chunk.js",
+    "static/js/2.a888c161.chunk.js",
     "static/css/main.47f581d8.chunk.css",
-    "static/js/main.6a9c3271.chunk.js"
+    "static/js/main.ca924033.chunk.js"
   ]
 }
